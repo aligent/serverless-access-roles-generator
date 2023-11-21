@@ -1,0 +1,17 @@
+{
+    "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "removeComments": true,
+        "noImplicitReturns": true,
+        "exactOptionalPropertyTypes": false,
+        "noPropertyAccessFromIndexSignature": false,
+        "strictPropertyInitialization": false,
+        "types": ["vitest/globals"],
+        "typeRoots": ["./node_modules", "./node_modules/@types"],
+        "module": "CommonJS",
+        "moduleResolution": "Classic"
+    },
+    "include": [],
+    "references": [{ "path": "./tsconfig.lib.json" }]
+}

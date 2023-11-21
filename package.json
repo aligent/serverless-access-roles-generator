@@ -1,0 +1,40 @@
+{
+  "name": "@aligent/serverless-access-roles-generator",
+  "version": "0.0.1",
+  "description": "A Serverless framework plugin for creates roles to access resources",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "prepublish": "tsc -p tsconfig.lib.json",
+    "dev": "node ./esbuild.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@tsconfig/strictest": "^2.0.1",
+    "@types/node": "^18.16.19",
+    "@types/serverless": "^3.12.17",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "@vitest/coverage-istanbul": "^0.34.5",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "vitest": "0.34.6"
+  },
+  "peerDependencies": {
+    "serverless": "3.x"
+  },
+  "engines": {
+    "npm": ">=9.0.0",
+    "node": "^18.16.0"
+  },
+  "author": "Aligent Consulting",
+  "license": "MIT"
+}
