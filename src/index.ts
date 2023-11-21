@@ -78,7 +78,7 @@ class ServerlessExportResources implements ServerlessPlugin {
         };
     }
 
-    async initialize() {
+    private async initialize() {
         const accessRolesGenerator = this.service.custom
             .accessRolesGenerator as AccessRolesGenerator;
 
@@ -106,7 +106,7 @@ class ServerlessExportResources implements ServerlessPlugin {
     /**
      * Generate custom access roles to other exported resources
      */
-    updateServerlessResources() {
+    private updateServerlessResources() {
         const originalResources = this.service.resources.Resources || {};
         const originalOutputs =
             (this.service.resources as ServerlessResources)?.Outputs || {};
@@ -130,7 +130,7 @@ class ServerlessExportResources implements ServerlessPlugin {
     /**
      * Export resource outputs to file
      */
-    async export() {
+    private async export() {
         const provider = this.serverless.getProvider('aws');
         const serviceName = this.service.getServiceName();
         const stackName = `${serviceName}-${provider.getStage()}`;
@@ -170,7 +170,7 @@ class ServerlessExportResources implements ServerlessPlugin {
         }
     }
 
-    async listExports() {
+    private async listExports() {
         const provider = this.serverless.getProvider('aws');
 
         try {
@@ -199,7 +199,7 @@ class ServerlessExportResources implements ServerlessPlugin {
         }
     }
 
-    generateAccessRoles() {
+    private generateAccessRoles() {
         const { principalAccountId, principalRoleName, externalId } =
             this.accessRolesGenerator;
 
