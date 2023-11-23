@@ -1,7 +1,7 @@
 {
   "name": "@aligent/serverless-access-roles-generator",
   "version": "0.0.1",
-  "description": "A Serverless framework plugin for creates roles to access resources",
+  "description": "A Serverless framework plugin for creating roles to access resources in AWS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
